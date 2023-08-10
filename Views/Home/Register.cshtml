@@ -1,0 +1,98 @@
+﻿
+@model Authenticate.Models.SignUp.UserViewModel
+
+<html>
+<head>
+
+   
+        <link rel="stylesheet" href="~/css/Style.css" />
+        <style>
+          
+
+            .login {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                max-width: 400px;
+                width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                color: #333333;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+
+            p {
+                margin: 10px 0;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .remember_me {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .remember_me input[type="checkbox"] {
+                    margin-right: 5px;
+                }
+
+            .submit {
+                margin-top: 20px;
+            }
+
+                .submit input[type="submit"] {
+                    background-color: #337ab7;
+                    color: #ffffff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease-in-out;
+                }
+
+                    .submit input[type="submit"]:hover {
+                        background-color: #286090;
+                    }
+
+            hr {
+                border: none;
+                border-top: 1px solid #ccc;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="login">
+        <h1>User Registration</h1>
+
+        <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Register">
+            <p><input type="text" name="username" value="" placeholder="Username or Email" required></p>
+            <p><input type="password" name="password" value="" placeholder="Password" required></p>
+            <p class="remember_me">
+                <label>
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    Remember me 
+                </label>
+            </p>
+            <p class="submit"><input type="submit" name="commit" value="Submit"></p>
+            <hr />
+        </form>
+    </div>
+</body>
+</html>

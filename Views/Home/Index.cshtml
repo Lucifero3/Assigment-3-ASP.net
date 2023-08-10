@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" />
+<br />
+<div class="container-fluid">
+    <div class="btn-group">
+
+        <a asp-controller="Home" asp-action="Register" class="btn-primary">Register</a>
+        <br />
+
+        <a asp-controller="Home" asp-action="Login" class="btn-primary">Login</a>
+
+        <h1>@TempData["Message"]</h1>
+    </div>
+</div>
